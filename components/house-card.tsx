@@ -23,6 +23,8 @@ export const HouseCard: BaseComponent<HouseCardProps> = ({ house }) => {
     ?.map((character) => character)
     .filter((character) => character.name.length > 0);
 
+  const coatOfArms = house.coatOfArms.length > 0 ? house.coatOfArms : "Unknown";
+
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
@@ -30,7 +32,7 @@ export const HouseCard: BaseComponent<HouseCardProps> = ({ house }) => {
         <CardDescription>Region of: {house.region}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col gap-4">Coat of arms: {house.coatOfArms}</div>
+        <div className="flex flex-col gap-4">Coat of arms: {coatOfArms}</div>
       </CardContent>
       <CardFooter>
         {house.swornMembers.length > 0 ? (

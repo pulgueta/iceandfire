@@ -106,8 +106,8 @@ export const PaginationControls: BaseComponent<PaginationControlsProps> = ({
           )}
         </PaginationItem>
 
-        {getPageNumbers().map((pageNum, idx) => (
-          <PaginationItem key={`${pageNum}-${idx}`}>
+        {getPageNumbers().map((pageNum) => (
+          <PaginationItem key={pageNum}>
             {pageNum === "ellipsis" ? (
               <PaginationEllipsis />
             ) : (
