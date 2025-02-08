@@ -101,7 +101,7 @@ const paragraphVariants = cva("text-pretty font-medium", {
   },
   defaultVariants: {
     variant: "sm",
-    weight: "medium",
+    weight: "normal",
     fontStyle: "normal",
     tracking: "tight",
     center: false,
